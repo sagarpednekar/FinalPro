@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing Products</h1>
+<div class="container">
+  <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-md-4">
+          <div class="card">
+          <%= image_tag product.image.url(:medium) ,class:'card-img-top'%>
+          <div class="card-block">
+            <h4 class="card-title"><%= product.name %></h4>
+            <button class="btn btn-primary">Buy RS:<%=product.price %></button> 
+          </div>
+          </div>
+        </div> 
+    <% end %>
+</div>  
+</div>
+
+
+
+
+
+<%= link_to 'New Product', new_product_path %>

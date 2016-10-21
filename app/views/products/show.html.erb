@@ -1,0 +1,9 @@
+<div class="col-md-4">
+	<%= image_tag @product.image.url(:medium) ,class:'img-responsive'%>
+	<h3><%= @product.name %></h3>
+	<p><%= @product.description %></p>
+	<SPAN><%= @product.price %></SPAN>
+</div>
+
+<p id="notice"><%= notice %></p>
+
